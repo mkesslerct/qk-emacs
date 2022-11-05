@@ -55,11 +55,13 @@
 (require 'qk-project)
 (require 'qk-tab-bar)
 (require 'qk-lang)
-(require 'qk-mail)
+;; (require 'qk-mail)
 (require 'qk-lsp)
-(require 'qk-amz)
 (require 'qk-vterm)
 (require 'qk-extra)
+(require 'qk-conda)
+(require 'qk-auctex)
+(require 'qk-denote)
 
 (setq custom-file "~/.emacs.d/var/custom.el")
 (message "*** Emacs loaded in %s with %d garbage collections."

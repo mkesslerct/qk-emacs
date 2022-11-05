@@ -10,6 +10,7 @@
 
 (use-package org-pdftools
   :straight t
+  ;; :disabled
   :hook (org-mode . org-pdftools-setup-link))
 
 ;; Instead of using the default authinfo password manager, which
