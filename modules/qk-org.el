@@ -86,7 +86,7 @@
      ("SOMEDAY" . (:foreground "#ab82ff" :weight bold))
      ("MEETING" . (:foreground "#81A1C1" :weight bold))
      ("NOTE" . (:foreground "#fcba03" :weight bold))))
-  (pushnew! warning-suppress-types '(org-element-cache))
+  ;; (pushnew! warning-suppress-types '(org-element-cache))
   :config
   (defun ar-org-insert-link-dwim ()
     "Like `org-insert-link' but with personal dwim preferences."
