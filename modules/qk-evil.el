@@ -46,14 +46,14 @@
   (evil-set-initial-state 'org-agenda-mode 'motion)
   (evil-mode t))
 
-(use-package evil-collection
-  :straight t
-  :demand t
-  :init
-  (setq
-   evil-collection-outline-bind-tab-p nil
-   evil-collection-setup-minibuffer t)
-  :config (evil-collection-init))
+;; (use-package evil-collection
+;;   :straight t
+;;   :demand t
+;;   :init
+;;   (setq
+;;    evil-collection-outline-bind-tab-p nil
+;;    evil-collection-setup-minibuffer t)
+;;   :config (evil-collection-init))
 
 (fset 'evil-redirect-digit-argument 'ignore)
 

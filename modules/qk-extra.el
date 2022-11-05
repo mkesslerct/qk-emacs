@@ -1,4 +1,5 @@
 ;;; qk-extra.el -*- lexical-binding: t; -*-
+(setq display-line-numbers-type 'relative)
 
 (use-package pdf-tools
   :straight t
@@ -102,5 +103,17 @@
     "f" 'emacs-everywhere-finish
     "c" '(emacs-everywhere-abort :which-key "emacs-everywhere-abort")))
 
+(use-package format-all
+  :straight t)
+
+
 (provide 'qk-extra)
 ;; qk-extra.el ends here. 
+
+
+
+
+
+
+
+

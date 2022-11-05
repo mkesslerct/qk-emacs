@@ -65,7 +65,6 @@
    org-outline-path-complete-in-steps nil
    org-refile-allow-creating-parent-nodes 'confirm
    org-enforce-todo-dependencies t
-   org-confirm-babel-evaluate nil
    org-log-repeat nil
    safe-local-variable-values '((eval org-content 2) (eval org-content 3))
    org-refile-targets (quote ((org-agenda-files :todo . "PROJECT")))
@@ -232,3 +231,7 @@ to the org-capture function."
 
 (provide 'qk-org)
 ;; qk-org.el ends here.
+
+
+
+

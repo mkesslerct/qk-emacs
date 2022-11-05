@@ -1,9 +1,9 @@
-;;; init.el -*- lexical-binding: t; -*-
+;;;init.el -*- lexical-binding: t; -*-
 
 ;; Reduce the checks for modifications on packages from straight, which
 ;; slows the configuration extensively. There are multiple options, but
 ;; I find `check-on-save' the most interesting, considering there are no
-;; external dependencies, nor additional CPU or memory impact.
+;;
 (setq straight-check-for-modifications '(check-on-save))
 
 (defvar bootstrap-version)
@@ -20,23 +20,24 @@
   (load bootstrap-file nil 'nomessage))
 (add-to-list 'straight-recipes-gnu-elpa-ignored-packages 'seq)
 
-;; Always defer use-package packages. This means that if I really need
+;;Always defer use-package packages. This m;; eans that if I really need
 ;; a package, I will go to my config and edit the use-package recipe
-;;to lazy load it. This reduces my startup time significantly.
+;; to lazy load it. This reduces my startup 
+;;time significantly.
 (setq use-package-always-defer t)
 (straight-use-package 'use-package)
 (eval-when-compile
   (require 'use-package))
 
-;; Add modules directory.
+;;Add modules directory.
 (add-to-list 'load-path (concat user-emacs-directory "modules"))
 (add-to-list 'load-path (concat user-emacs-directory "modules/personal"))
 
-;; Core libs.
+;;Core libs.
 (require 'core)
 (require 'core-lib)
 
-;; Modules
+;;Modules
 (require 'qk-general)
 (require 'qk-evil)
 (require 'qk-theme)
@@ -50,6 +51,7 @@
 ;; (require 'qk-org-roam)
 (require 'qk-org)
 (require 'qk-org-agenda)
+(require 'qk-org-babel)
 (require 'qk-denote)
 (require 'qk-git)
 (require 'qk-project)
@@ -60,6 +62,7 @@
 (require 'qk-vterm)
 (require 'qk-extra)
 (require 'qk-conda)
+(require 'qk-jupyter)
 (require 'qk-auctex)
 (require 'qk-denote)
 

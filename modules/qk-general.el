@@ -112,3 +112,14 @@
 
 (provide 'qk-general)
 ;;; qk-general.el ends here.
+
+
+
+
+
+
+
+
+
+
+

@@ -88,16 +88,21 @@ c-mode :when (re-search-backward "^\\S-*$" (line-beginning-position) 'noerror)
 
 org-mode
 
-(title "#+title: " p n "#+author: Enrique Kessler Martínez" n "#+language: en" n n)
+(title "#+title: " p n "#+author: Mathieu Kessler " n "#+language: en" n n)
 (quote "#+begin_quote" n> r> n> "#+end_quote")
 (example "#+begin_example" n> r> n> "#+end_example")
 (center "#+begin_center" n> r> n> "#+end_center")
 (comment "#+begin_comment" n> r> n> "#+end_comment")
 (verse "#+begin_verse" n> r> n> "#+end_verse")
 (src "#+begin_src " p n> r> n> "#+end_src" :post (org-edit-src-code))
-(jup "#+begin_src jupyter-python :kernel " p
-     " :session " (file-name-sans-extension (file-name-nondirectory buffer-file-name))
-     n> r> n> "#+end_src" :post (org-edit-src-code))
+(pyt "#+begin_src python " p n> r> n> "#+end_src" :post (org-edit-src-code))
+(jup "#+begin_src jupyter-python :kernel "  (car (jupyter-completing-read-kernelspec)) " :session " (let* ((file-name (file-name-sans-extension (buffer-file-name)))
+         (file-base (file-name-nondirectory file-name))
+         (file-directory (file-name-directory file-name)))
+    (if  (string= file-directory denote-directory)
+        (let ((_ (string-match "\\(.*\\)--" file-base)))
+          (match-string 1 file-base))
+      file-base)) n> r> n> "#+end_src" :post (org-edit-src-code))
 (elisp "#+begin_src emacs-lisp" n> r> n "#+end_src" :post (org-edit-src-code))
 
 rust-mode rustic-mode

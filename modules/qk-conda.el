@@ -3,9 +3,10 @@
 
 (use-package conda
   :straight t
-  :custom '(conda-anaconda-home "~/opt/anaconda3")
   :config
-  (conda-env-autoactivate-mode t))
+  (setq conda-anaconda-home (expand-file-name "~/opt/anaconda3"))
+  (setq conda-env-home-directory (expand-file-name "~/opt/anaconda3"))
+  (setq conda-env-subirectory "envs"))
 
 (provide 'qk-conda)
 ;; qk-conda.el ends here.

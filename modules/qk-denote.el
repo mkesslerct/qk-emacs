@@ -7,7 +7,7 @@
   :hook (dired-mode . denote-dired-mode-in-directories)
   :init
   (setq
-  denote-directory (expand-file-name "/Users/mkessler/OneDrive - Universidad Politécnica de Cartagena/slip-box/denotes")
+  denote-directory (expand-file-name "/Users/mkessler/OneDrive - Universidad Politécnica de Cartagena/slip-box/denotes/")
    qk-notes-directory denote-directory
    org-default-notes-file (concat qk-notes-directory "refile.org")
    denote-known-keywords '()

@@ -1,4 +1,4 @@
-;;; qk-mail.el --- Mail configuration using mu4e -*- lexical-binding: t; -*-
+
 
 ;; Adding mu4e configuration that was configured with mbsync.
 ;; We have installed it with the package manager, in order to make sure
@@ -263,3 +263,12 @@
 
 (provide 'qk-mail)
 ;;; qk-mail.el ends here.
+
+
+
+
+
+
+
+
+
