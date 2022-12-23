@@ -65,6 +65,7 @@
 (require 'qk-jupyter)
 (require 'qk-auctex)
 (require 'qk-denote)
+(require 'qk-quarto)
 
 (setq custom-file "~/.emacs.d/var/custom.el")
 (message "*** Emacs loaded in %s with %d garbage collections."

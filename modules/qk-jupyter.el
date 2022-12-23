@@ -3,11 +3,10 @@
 
 (use-package jupyter
   :straight t
-  :commands (jupyter-run-server-repl
-             jupyter-run-repl
-             jupyter-server-list-kernels)
-  :init (eval-after-load 'jupyter-org-extensions ; conflicts with my helm config, I use <f2 #>
-          '(unbind-key "C-c h" jupyter-org-interaction-mode-map)))
+  :commands jupyter-run-server-repl jupyter-run-repl jupyter-server-list-kernels)
+
+(after! jupyter-org-extensions
+  (unbind-key "C-c h" jupyter-org-interaction-mode-map))
   
 (after! jupyter-mime
   (defun jupyter-ansi-color-apply-on-region (begin end)

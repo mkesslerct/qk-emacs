@@ -23,6 +23,7 @@
    auto-revert-interval 1
    revert-without-query '(".*")
    mac-right-option-modifier 'none
+   ns-option-modifier 'none
    ad-redefinition-action 'accept
    warning-suppress-log-types '((comp))
    create-lockfiles nil
@@ -171,3 +172,4 @@ Intended as :after advice for `delete-file'."
 
 (provide 'qk-defaults)
 ;; qk-defaults.el ends here.
+
