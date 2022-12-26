@@ -62,15 +62,15 @@
       (corfu-mode 1)))
   (add-hook 'minibuffer-setup-hook #'corfu-enable-in-minibuffer))
 
-(use-package corfu-doc
-  :straight t
-  :hook (corfu-mode . corfu-doc-mode)
-  :init
-  (setq corfu-doc-delay 1)
-  :general
-  (:keymaps
-   'corfu-map
-   "C-h" 'corfu-doc-toggle))
+;; (use-package corfu-doc
+;;   :straight t
+;;   :hook (corfu-mode . corfu-doc-mode)
+;;   :init
+;;   (setq corfu-doc-delay 1)
+;;   :general
+;;   (:keymaps
+;;    'corfu-map
+;;    "C-h" 'corfu-doc-toggle))
 
 (after! corfu
   (setq kind-icon-default-face 'corfu-default)
