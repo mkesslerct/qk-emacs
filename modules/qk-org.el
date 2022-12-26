@@ -36,7 +36,6 @@
    org-outline-path-complete-in-steps nil
    org-refile-allow-creating-parent-nodes 'confirm
    org-enforce-todo-dependencies t
-   org-confirm-babel-evaluate nil
    org-log-repeat nil
    org-refile-targets (quote ((org-agenda-files :todo . "PROJECT")))
    org-todo-keywords
@@ -57,7 +56,7 @@
      ("SOMEDAY" . (:foreground "#ab82ff" :weight bold))
      ("MEETING" . (:foreground "#81A1C1" :weight bold))
      ("NOTE" . (:foreground "#fcba03" :weight bold))))
-  (pushnew! warning-suppress-types '(org-element-cache))
+  ;; (pushnew! warning-suppress-types '(org-element-cache))
   :config
   (defun ar-org-insert-link-dwim ()
     "Like `org-insert-link' but with personal dwim preferences."
@@ -225,3 +224,7 @@ to the org-capture function."
 
 (provide 'qk-org)
 ;; qk-org.el ends here.
+
+
+
+

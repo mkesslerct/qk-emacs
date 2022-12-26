@@ -71,7 +71,7 @@ See `org-agenda-deadline-warning-days'")
 (defvar qk-org-agenda-skip-scheduled-if-deadline-is-shown t
   "Default: skip scheduled date if deadline is present.
 See `org-agenda-skip-scheduled-if-deadline-is-shown'")
-(defvar qk-denote-directory (concat qk-notes-directory "pages/")
+(defvar qk-denote-directory (expand-file-name "/Users/mkessler/OneDrive - Universidad Politécnica de Cartagena/slip-box/denotes/")
   "Default: pages directory inside our `qk-notes-directory'.
 See `denote-directory'.")
 (defvar qk-org-default-notes-file (concat qk-denote-directory "refile.org")

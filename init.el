@@ -1,4 +1,4 @@
-;;; init.el -*- lexical-binding: t; -*-
+;;;init.el -*- lexical-binding: t; -*-
 
 (defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
 (defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
@@ -33,17 +33,18 @@
 (add-hook 'after-init-hook #'elpaca-process-queues)
 (elpaca `(,@elpaca-order))
 
-;; Always defer use-package packages. This means that if I really need
+;;Always defer use-package packages. This m;; eans that if I really need
 ;; a package, I will go to my config and edit the use-package recipe
-;;to lazy load it. This reduces my startup time significantly.
+;; to lazy load it. This reduces my startup 
+;;time significantly.
 (setq use-package-always-defer t)
 (elpaca use-package (require 'use-package))
 
-;; Add modules directory.
+;;Add modules directory.
 (add-to-list 'load-path (concat user-emacs-directory "modules"))
 (add-to-list 'load-path (concat user-emacs-directory "modules/personal"))
 
-;; Core libs.
+;;Core libs.
 (require 'core)
 (require 'core-lib)
 
@@ -61,16 +62,22 @@
 (require 'qk-ui)
 (require 'qk-org)
 (require 'qk-org-agenda)
+(require 'qk-org-babel)
 (require 'qk-denote)
 (require 'qk-git)
 (require 'qk-project)
 (require 'qk-tab-bar)
 (require 'qk-lang)
-(require 'qk-mail)
 (require 'qk-eglot)
+;; (require 'qk-amz)
+;; (require 'qk-mail)
 (require 'qk-vterm)
 (require 'qk-extra)
-;; (require 'qk-amz)
+(require 'qk-conda)
+(require 'qk-jupyter)
+(require 'qk-auctex)
+(require 'qk-denote)
+(require 'qk-quarto)
 
 (setq custom-file "~/.emacs.d/var/custom.el")
 (message "*** Emacs loaded in %s with %d garbage collections."

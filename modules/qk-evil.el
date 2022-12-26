@@ -30,7 +30,7 @@
      minibuffer-local-completion-map
      minibuffer-local-must-match-map
      minibuffer-local-isearch-map)
-   [escape] 'minibuffer-keyboard-quit)
+   [escape] 'abort-minibuffers)
   :config
   ;; Stop copying each visual state move to the clipboard.
   (advice-add #'evil-visual-update-x-selection :override #'ignore)
