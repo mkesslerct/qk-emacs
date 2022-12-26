@@ -74,9 +74,8 @@
 (require 'qk-vterm)
 (require 'qk-extra)
 (require 'qk-conda)
-(require 'qk-jupyter)
+;; (require 'qk-jupyter)
 (require 'qk-auctex)
-(require 'qk-denote)
 (require 'qk-quarto)
 
 (setq custom-file "~/.emacs.d/var/custom.el")

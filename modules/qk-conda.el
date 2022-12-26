@@ -1,8 +1,7 @@
 ;;; qk-conda.el -*- 
 ;;; https://github.com/necaris/conda.el
 
-(use-package conda
-  :straight t
+(elpaca-use-package conda
   :init
   (setq
    conda-anaconda-home (expand-file-name "~/opt/anaconda3")

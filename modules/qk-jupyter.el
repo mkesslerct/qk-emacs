@@ -1,8 +1,7 @@
 ;;; qk-jupyter.el -*- 
 ;;; https://github.com/necaris/conda.el
 
-(use-package jupyter
-  :straight t
+(elpaca-use-package jupyter
   :commands jupyter-run-server-repl jupyter-run-repl jupyter-server-list-kernels)
 
 (after! jupyter-org-extensions

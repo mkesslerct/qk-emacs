@@ -30,7 +30,7 @@ See `dired-listing-switches'.")
     ("\\*Asing-native-compile-log\\*" . hide))
   "Default: all buffers that would make sense with the loaded packages.
 See `popper-reference-buffers'")
-(defvar qk-aw-keys '(?h ?j ?k ?l ?a ?o ?e ?i ?u)
+(defvar qk-aw-keys '(?h ?j ?k ?l ?a ?s ?d ?f ?g)
   "Default: Dvorak's home-row keys for `ace-window' jumping. See `aw-keys'.")
 (defvar qk-corfu-auto t
   "Default: `corfu' completion automatically pops-up on `qk-corfu-auto-prefix' characters.
@@ -59,9 +59,9 @@ See `consult-preview-key'")
 (defvar qk-doom-modeline-buffer-file-name-style 'truncate-with-project
   "Default: show <PROJECT_NAME>/<LETTER>/<LETTER>/<FILE_NAME> on modeline.
 See `doom-modeline-buffer-file-name-style' for options.")
-(defvar qk-modeline-display-time t
+(defvar qk-modeline-display-time nil
   "Default: display updating time on modeline. See `display-time-update'.")
-(defvar qk-notes-directory (expand-file-name "~/Documents/slipbox/")
+(defvar qk-notes-directory (expand-file-name "/Users/mkessler/OneDrive - Universidad Politécnica de Cartagena/slip-box/denotes/")
   "Default: my slipbox's path.")
 (defvar qk-org-archive-location (concat qk-notes-directory "../archive/%s_archive::")
   "Default: archive name concatenated to archive. See `org-archive-location'.")
@@ -71,7 +71,7 @@ See `org-agenda-deadline-warning-days'")
 (defvar qk-org-agenda-skip-scheduled-if-deadline-is-shown t
   "Default: skip scheduled date if deadline is present.
 See `org-agenda-skip-scheduled-if-deadline-is-shown'")
-(defvar qk-denote-directory (expand-file-name "/Users/mkessler/OneDrive - Universidad Politécnica de Cartagena/slip-box/denotes/")
+(defvar qk-denote-directory qk-notes-directory
   "Default: pages directory inside our `qk-notes-directory'.
 See `denote-directory'.")
 (defvar qk-org-default-notes-file (concat qk-denote-directory "refile.org")
@@ -84,7 +84,7 @@ See `denote-prompts'.")
 See `git-commit-summary-max-length'.")
 (defvar qk-git-commit-fill-column 72
   "Default: set fill column to this number if on `git-commit-mode'.")
-(defvar qk-tab-bar-show nil
+(defvar qk-tab-bar-show t
   "Default: hide tab-bar, though use it in the shadows. See `tab-bar-show'.")
 (defvar qk-python-shell-interpreter "python3"
   "Default: command to use when running python. See `python-shell-interpreter'.")

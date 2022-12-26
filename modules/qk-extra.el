@@ -90,10 +90,6 @@
 ;;     :major-modes '(prog-mode text-mode org-mode)
 ;;     "q" 'chatgpt-query))
 
-(use-package format-all
-  :straight t)
-
-
 (provide 'qk-extra)
 ;; qk-extra.el ends here. 
 

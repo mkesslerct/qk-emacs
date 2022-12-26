@@ -1,7 +1,6 @@
 ;;; qk-auctex.el -*- 
 
-(use-package auctex
-  :straight t
+(elpaca-use-package auctex
   :config
   (reftex-plug-into-AUCTeX t)
   (add-hook! 'LaTeX-mode-hook 'turn-on-reftex))

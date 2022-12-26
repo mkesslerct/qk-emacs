@@ -23,7 +23,6 @@
   (+general-global-org
     "a" 'qk-denote-get-projects)
   :config
-  (straight-use-package 'embark-org)
   (defun qk-denote-find-dailies ()
     "Find daily notes in the current `qk-notes-dailies-directory'."
     (interactive)
